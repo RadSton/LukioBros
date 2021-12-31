@@ -1,5 +1,6 @@
 #include "Vector2f.h"
 
+Math::Vector2f::Vector2f() : m_x(0), m_y(0) {}
 Math::Vector2f::Vector2f(float x, float y) : m_x(x), m_y(y) {}
 
 float Math::Vector2f::getX() {

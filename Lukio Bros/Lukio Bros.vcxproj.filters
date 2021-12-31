@@ -98,9 +98,11 @@
     <ClInclude Include="Animation.h">
       <Filter>Headerdateien\opengl</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\animationShader\vertexShader.glsl" />
-    <None Include="assets\animationShader\fragmentShader.glsl" />
+    <ClInclude Include="RenderContext.h">
+      <Filter>Headerdateien\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="Basic2DRenderer.h">
+      <Filter>Headerdateien\opengl</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

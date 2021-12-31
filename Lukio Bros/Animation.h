@@ -5,19 +5,16 @@ namespace Engine {
 	class Animation {
 	public:
 		Animation();
-		Animation(Engine::Texture*, uint32_t obX, uint32_t obY);
-		void nextFrame();
-		void addFrame(uint32_t x, uint32_t y);
-		void save();
-		void setLoop(bool);
-		bool getLoop();
+		Animation(Engine::Texture*);
+		Animation(Engine::Texture*, uint32_t);
+		void nextFrame(Engine::Mesh*);
+		void addFrame(Math::Vector2f);
+		void playFrame(Math::Vector2f*, Engine::Mesh*);
 		uint32_t getCurrentFrame();
 		uint32_t getLastFrame();
 	private:
-		uint32_t textureWidth,textureHeight;
 		Engine::Texture* texture;
-		bool looped;
 		std::unordered_map<uint32_t, Math::Vector2f> frames;
-		uint32_t currentFrame, lastFrame;
+		uint32_t currentFrame, lastFrame, tileSize;
 	};
 }

@@ -3,6 +3,7 @@
 namespace Math {
 
 	struct Vector2f {
+		Vector2f();
 		Vector2f(float x, float y);
 		float getX();
 		float getY();

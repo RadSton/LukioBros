@@ -7,6 +7,8 @@ Engine::Texture::Texture(const char* path) : width(0), height(0), bpp(0) {
 	stbi_set_flip_vertically_on_load(1);
 	localBuffer = stbi_load(path, &width, &height, &bpp, 4);
 
+	size = Math::Vector2f(width, height);
+
 	glGenTextures(1, &textureID);
 	glBindTexture(GL_TEXTURE_2D, textureID);
 
@@ -26,4 +28,8 @@ void Engine::Texture::Bind(int slot) {
 
 void Engine::Texture::Unbind(int slot) {
 	glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+Math::Vector2f* Engine::Texture::getSize() {
+	return &size;
 }

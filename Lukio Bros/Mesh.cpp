@@ -1,5 +1,4 @@
-#include "Mesh.h";
-
+#include "Mesh.h"
 /*
 Private Var
 GLuint vao;  Vertex Array Object
@@ -7,7 +6,9 @@ GLuint vbo; Vertex Buffer Object
 		
 */
 
-void Engine::Mesh::Load(const GLfloat vertecies[], uint32_t verteciesLe, const GLuint inceies[], uint32_t indeciesLe) {
+Engine::Mesh::Mesh(){}
+
+void Engine::Mesh::Load(const GLfloat vertecies[], uint32_t verteciesLe, const GLfloat txCoordinates[], const GLuint inceies[], uint32_t indeciesLe) {
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 	
@@ -28,8 +29,11 @@ void Engine::Mesh::Load(const GLfloat vertecies[], uint32_t verteciesLe, const G
 
 
 	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 4, (const void*)(2 * sizeof(float)));
-	glBufferData(GL_ARRAY_BUFFER, verteciesLe * sizeof(float), vertecies, GL_STATIC_DRAW);
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, (const void*)0);
+	glBufferData(GL_ARRAY_BUFFER, 8 * sizeof(float), txCoordinates, GL_DYNAMIC_DRAW);
+
+	
+	glDisableVertexAttribArray(1);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -40,6 +44,11 @@ void Engine::Mesh::Load(const GLfloat vertecies[], uint32_t verteciesLe, const G
 
 
 	glBindVertexArray(0);
+
+
+	glEnableVertexAttribArray(0);
+	glEnableVertexAttribArray(1); // WEIL DIE FAULHEIT SIEGT
+	// and is saved 4 calls per render xD idk why this works
 	
 }
 
@@ -50,7 +59,17 @@ void Engine::Mesh::Bind() {
 }
 
 void Engine::Mesh::Unbind() {
-	glDisableVertexAttribArray(0);
-	glDisableVertexAttribArray(1);
 	glBindVertexArray(0);
+}
+
+void Engine::Mesh::Move(float x, float y) {
+	position.add(x, y);
+}
+
+Math::Vector2f* Engine::Mesh::getPosition() {
+	return &position;
+}
+
+GLuint Engine::Mesh::getTextureBuffer() {
+	return tbo;
 }
