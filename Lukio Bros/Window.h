@@ -9,7 +9,6 @@ namespace Engine {
 		void Init();
 		void Destroy();
 	private:
-		
 		GLFWwindow* window;
 		uint32_t statusCode;
 	

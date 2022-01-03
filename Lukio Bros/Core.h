@@ -3,11 +3,9 @@
 
 // STUFF TO USE
 
-#include "Basic2DRenderer.h"
-
+#include "Batch2DRenderer.h"
 
 
 // RENDERING CONTEXT END
 
-#include "Log.h"
 #include "Context.h"
