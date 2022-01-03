@@ -51,6 +51,16 @@ namespace Renderer {
 			shader.Unbind();
 			tex->Unbind();
 		};
+		void RenderMeshWithoutTransforming(Engine::Mesh* mesh, Engine::Texture* tex, Engine::Shader* shad) {
+			tex->Bind(0);
+			shad->Bind();
+			shad->setInt("u_tex", 0);
+			mesh->Bind();
+			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+			mesh->Unbind();
+			shad->Unbind();
+			tex->Unbind();
+		};
 
 		void RenderMesh(Engine::Mesh* mesh, Engine::Texture* tex, int slot) {
 			tex->Bind(slot);

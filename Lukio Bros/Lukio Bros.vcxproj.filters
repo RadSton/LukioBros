@@ -22,6 +22,12 @@
     <Filter Include="Ressourcendateien\math">
       <UniqueIdentifier>{0c7e1bf8-f867-494d-9a32-6ee8492940e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\imgui">
+      <UniqueIdentifier>{8708c5be-ec70-4e7e-86e0-540a0f9bf59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\game">
+      <UniqueIdentifier>{c369e38f-6712-4a5c-a1f5-e78e35864ae0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LukioBros.cpp">
@@ -117,31 +123,40 @@
       <Filter>Headerdateien\opengl</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imconfig.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imgui.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imgui_impl_glfw.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imgui_impl_opengl3.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imgui_impl_opengl3_loader.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imgui_internal.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imstb_rectpack.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imstb_textedit.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
     </ClInclude>
     <ClInclude Include="imgui\imstb_truetype.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Ressourcendateien\game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameContent.h">
+      <Filter>Ressourcendateien\game</Filter>
+    </ClInclude>
+    <ClInclude Include="Intro.h">
+      <Filter>Ressourcendateien\game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

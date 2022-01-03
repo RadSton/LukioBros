@@ -76,6 +76,13 @@ namespace Engine {
 			return tbo;
 		}
 
+		void Delete() {
+			glDeleteBuffers(1, &vbo);
+			glDeleteBuffers(1, &tbo);
+			glDeleteBuffers(1, &ibo);
+			glDeleteVertexArrays(1, &vao);
+		}
+
 	private: 
 		GLuint vao; // Vertex Array Object
 		GLuint vbo; // Vertex Buffer Object

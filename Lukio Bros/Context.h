@@ -9,6 +9,7 @@ namespace Luka {
 		static void WindowUpdate(int, int);
 		static void Render();
 		static void ImGuiRender(float timing[]);
+		static void OnEvent(std::string);
 		static void Update(float, GLFWwindow*);
 		static void Close();
 	};

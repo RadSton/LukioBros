@@ -104,6 +104,7 @@
     <ClInclude Include="Basic2DRenderer.h" />
     <ClInclude Include="Context.h" />
     <ClInclude Include="Core.h" />
+    <ClInclude Include="GameContent.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_glfw.h" />
@@ -114,7 +115,9 @@
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="Intro.h" />
     <ClInclude Include="Log.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="RenderContext.h" />

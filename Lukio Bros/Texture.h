@@ -22,6 +22,9 @@ namespace Engine {
 
 			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, localBuffer);
 			glBindTexture(GL_TEXTURE_2D, 0);
+
+
+			stbi_image_free(localBuffer);
 		}
 		void Bind(int slot = 0) {
 			glActiveTexture(GL_TEXTURE0 + slot);
@@ -33,6 +36,9 @@ namespace Engine {
 		}
 		Math::Vector2f* getSize() {
 			return &size;
+		}
+		void Delete() {
+			glDeleteTextures(1, &textureID);
 		}
 	private:
 		GLuint textureID;
